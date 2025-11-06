@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+# ASSUMES EVERYTHING IS RISKY
+# finds min risk based off expected return
 
 def feasibility(m, target_return):
     """
@@ -50,6 +52,7 @@ def two_portfolio_solution(z, m, e, w_mv, expected_return):
 
 
 if __name__ == "__main__":
+    # 3 assets 5 time periods
     z = np.array([
         [0.05, 0.02, 0.03],
         [0.04, 0.01, 0.02],
@@ -64,6 +67,7 @@ if __name__ == "__main__":
     e = np.ones(m.shape[0])
 
     expected_return = 0.05
+    risk_free_rate = 0.01
 
     is_feasible = feasibility(m, expected_return)
     print(f"Is target return {expected_return} feasible? {is_feasible}")
