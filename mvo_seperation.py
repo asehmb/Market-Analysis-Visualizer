@@ -50,7 +50,7 @@ if __name__ == "__main__":
     e = np.ones(m.shape[0])
 
     expected_return = 0.05
-    risk_free_rate = 0.07
+    risk_free_rate = 0.03
 
     is_feasible = feasibility(m, risk_free_rate, e)
     print(is_feasible)
